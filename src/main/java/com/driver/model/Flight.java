@@ -15,18 +15,28 @@ public class Flight {
     private Date flightDate;
 
     private double duration;
+    private int noOfTicketsBoooked;
+
+    public int getNoOfTicketsBoooked() {
+        return noOfTicketsBoooked;
+    }
+
+    public void setNoOfTicketsBoooked(int noOfTicketsBoooked) {
+        this.noOfTicketsBoooked = noOfTicketsBoooked;
+    }
 
     public Flight() {
 
     }
 
-    public Flight(int flightId, City fromCity, City toCity, int maxCapacity, Date flightDate, double duration) {
+    public Flight(int flightId, City fromCity, City toCity, int maxCapacity, Date flightDate, double duration,int noOfTicketsBoooked) {
         this.flightId = flightId;
         this.fromCity = fromCity;
         this.toCity = toCity;
         this.maxCapacity = maxCapacity;
         this.flightDate = flightDate;
         this.duration = duration;
+        this.noOfTicketsBoooked=0;
     }
 
     public int getFlightId() {
