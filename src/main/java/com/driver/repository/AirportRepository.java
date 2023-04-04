@@ -58,25 +58,17 @@ public class AirportRepository {
         return getShortestDurationOfPossibleBetweenTwoCities;
     }
 
-    public int getNumberOfPeopleOn(Date date) {
+    public int getNumberOfPeopleOn(Date date, String airportName) {
         int totalPeople=0;
-//        City airPortcity=City.BANGLORE;
-//        for(String a:airportDb.keySet())
-//        {
-//          if(airportName.equals(a))
-//          {
-//              airPortcity=airportDb.get(a).getCity();
-//              break;
-//          }
-//        }
+        City airPortcity=airportDb.get(airportName).getCity();
         for(Flight f:flightDb.values())
         {
             if(f.getFlightDate()==date)
             {
-//                if(f.getFromCity()==airPortcity||f.getToCity()==airPortcity)
-//                {
+                if(f.getFromCity()==airPortcity||f.getToCity()==airPortcity)
+                {
                     totalPeople+=f.getNoOfTicketsBoooked();
-//                }
+                }
             }
         }
         return totalPeople;
