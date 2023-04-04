@@ -29,7 +29,7 @@ public class Flight {
 
     }
 
-    public Flight(int flightId, City fromCity, City toCity, int maxCapacity, Date flightDate, double duration,int noOfTicketsBoooked) {
+    public Flight(int flightId, City fromCity, City toCity, int maxCapacity, Date flightDate, double duration) {
         this.flightId = flightId;
         this.fromCity = fromCity;
         this.toCity = toCity;
