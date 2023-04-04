@@ -34,8 +34,8 @@ public class AirportService {
         return airportRepository.getShortestDurationOfPossibleBetweenTwoCities(fromCity,toCity);
     }
 
-    public int getNumberOfPeopleOn(Date date, String airportName) {
-        return airportRepository.getNumberOfPeopleOn(date,airportName);
+    public int getNumberOfPeopleOn(Date date) {
+        return airportRepository.getNumberOfPeopleOn(date);
     }
 
     public int calculateFlightFare(Integer flightId) {
