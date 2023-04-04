@@ -60,15 +60,9 @@ public class AirportRepository {
 
     public int getNumberOfPeopleOn(Date date, String airportName) {
         int totalPeople=0;
-        City airPortcity=City.KANPUR;
-        for(String a:airportDb.keySet())
-        {
-          if(airportName.equals(a))
-          {
-              airPortcity=airportDb.get(a).getCity();
-              break;
-          }
-        }
+        City airPortcity=airportDb.get(airportName).getCity();
+        if (airPortcity==null)return 0;
+
         for(Flight f:flightDb.values())
         {
             if(f.getFlightDate()==date)
