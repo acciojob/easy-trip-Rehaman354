@@ -67,7 +67,7 @@ public class AirportController {
        return airportService.getShortestDurationOfPossibleBetweenTwoCities(fromCity,toCity);
     }
 
-    @GetMapping("/get-number-of-people-on-airport-on/{date}/{airportName")
+    @GetMapping("/get-number-of-people-on-airport-on/{date}/{airportName}")
     public int getNumberOfPeopleOn(@PathVariable("date") Date date,@RequestParam("airportName")String airportName){
 
         //Calculate the total number of people who have flights on that day on a particular airport
